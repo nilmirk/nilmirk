@@ -1,0 +1,130 @@
+@use 'variables' as *;
+@use 'sass:list';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all .3s ease-out;
+}
+:root {
+  --font: #{$font};
+}
+body {
+  font-family: var(--font);
+  background-color: $black;
+  padding: 1.5rem 8%;
+  color: $white;
+}
+.page {
+  margin-top: 112px;
+}
+svg {
+  width: 1em;
+  height: 1em;
+
+  path {
+    fill: currentColor;
+  }
+}
+
+$headings: (
+  "h1": (3rem, 700),
+  "h2": (2.5rem, 700),
+  "h3": (2.25rem, 700),
+  "h4": (2rem, 600),
+  "h5": (1.5rem, 600),
+  "h6": (1.25rem, 600)
+);
+@each $name, $props in $headings {
+  .#{$name} {
+    font-size: nth($props, 1);
+    font-weight: nth($props, 2);
+  }
+}
+$bodys: (
+  "b1": (1.25rem, 500),
+  "b2": (1rem, 500),
+  "b3": (.75rem, 500),
+  "bt": (1.25rem, 600)
+);
+@each $name, $props in $bodys {
+  .#{$name} {
+    font-size: list.nth($props, 1);
+    font-weight: list.nth($props, 2);
+  }
+}
+
+$links: (
+  "white": ($white, $white-hover),
+  "accent": ($accent, $accent-hover),
+  "black": ($black, $black-hover)
+);
+@each $name, $props in $links {
+  .link-#{$name} {
+    color: list.nth($props, 1);
+
+    &:hover {
+      color: list.nth($props, 2);
+    }
+  }
+}
+
+$text-colors: (
+  "white": $white,
+  "white-hover": $white-hover,
+  "accent": $accent,
+  "accent-hover": $accent-hover,
+  "black": $black,
+  "black-hover": $black-hover
+);
+@each $name, $color in $text-colors {
+  .text-#{$name} {
+    color: #{$color} !important;
+  }
+  .bg-#{$name} {
+    background-color: #{$color} !important;
+  }
+}
+@for $pad from 1 through 64 {
+  .pad-v-#{$pad} {
+    padding-top: #{calc($pad / 16)}rem;
+    padding-bottom: #{calc($pad / 16)}rem;
+  }
+  .pad-h-#{$pad} {
+    padding-left: #{calc($pad / 16)}rem;
+    padding-right: #{calc($pad / 16)}rem;
+  }
+}
+@for $rad from 1 through 64 {
+  .rad-#{$rad} {
+    border-radius: #{$rad / 16}rem;
+  }
+}
+@for $gap from 0 through 64 {
+  .h-#{$gap} {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: #{calc($gap / 16)}rem;
+  }
+  .v-#{$gap} {
+    display: flex;
+    flex-direction: column;
+    gap: #{calc($gap / 16)}rem;
+  }
+}
+
+.center {
+  align-items: center;
+}
+.between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.w-100 {
+  width: 100%;
+}
