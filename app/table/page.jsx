@@ -8,6 +8,7 @@ export default async function Page() {
   const filePath = path.join(process.cwd(), 'data', 'db.json');
   const file = fs.readFileSync(filePath, 'utf-8');
   const data = JSON.parse(file);
+  const items = data.games;
 
   return (
     <div className="page v-64 w-100">
@@ -19,12 +20,12 @@ export default async function Page() {
             <TableCell header>Статус</TableCell>
             <TableCell header>Плейлист</TableCell>
           </TableRow>
-          {data.length === 0 ? (
+          {items.length === 0 ? (
             <TableRow>
               <TableCell uncenter colSpan={3}>Нет данных</TableCell>
             </TableRow>
           ) : (
-            data.map((item, i) => (
+            items.map((item, i) => (
               <TableRow key={i}>
                 <TableCell uncenter>{item.name}</TableCell>
                 <TableCell><ChipGame status={item.status} /></TableCell>
