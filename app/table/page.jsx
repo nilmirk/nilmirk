@@ -1,13 +1,56 @@
+"use client";
 import { A } from "@/components/kit";
-export default function InDev() {
+import { useEffect, useState } from "react";
+import { Table, TableCell, TableRow, ChipGame } from "@/components/blocks";
+
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'data', 'db.json');
+  const jsonData = fs.readFileSync(filePath, 'utf-8');
+  const data = JSON.parse(jsonData);
+
+  return {
+    props: {
+      games: data.games,
+    },
+  };
+}
+
+export default function Page() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/games')
+      .then(res => res.json())
+      .then(data => setData(data));
+  }, []);
+
   return (
     <div className="page v-64 w-100">
       <div className="v-32 w-100">
-        <div className="v-16">
-          <h1 className="h1">Страница находится в разработке</h1>
-          <h6 className="h6 text-white-hover">Код ошибки: подождите</h6>
-        </div>
-        <A href='/' color="accent">На главную</A>
+        <h1 className="h1">Таблица</h1>
+        <Table>
+          <TableRow header>
+            <TableCell uncenter header>Название</TableCell>
+            <TableCell header>Статус</TableCell>
+            <TableCell header>Плейлист</TableCell>
+          </TableRow>
+          {data.length === 0 ? (
+            <TableRow>
+              <TableCell uncenter colSpan={3}>Нет данных</TableCell>
+            </TableRow>
+          ) : (
+            data.map((item, i) => (
+              <TableRow key={i}>
+                <TableCell uncenter>{item.name}</TableCell>
+                <TableCell><ChipGame status={item.status} /></TableCell>
+                <TableCell><A href={item.playlist} color="black">Клик</A></TableCell>
+              </TableRow>
+            ))
+          )}
+        </Table>
       </div>
     </div>
   );

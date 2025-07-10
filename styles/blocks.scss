@@ -56,3 +56,23 @@ header {
     @extend .bg-accent;
   }
 }
+
+.table {
+  width: 60%;
+  align-self: center;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 2px;
+  overflow: hidden;
+}
+.table-row {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: 1fr repeat(2, 150px);
+}
+.chip {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 700
+}

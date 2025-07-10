@@ -1,0 +1,21 @@
+{
+  "games": [
+    {
+      "name": "Dishonored",
+      "status": "warning",
+      "playlist": "#"
+    },
+    {
+      "name": "Portal 2",
+      "status": "info",
+      "playlist": "#"
+    }
+  ],
+  "anime": [
+    {
+      "name": "Токийский гуль",
+      "status": "info",
+      "playlist": "#"
+    }
+  ]
+}

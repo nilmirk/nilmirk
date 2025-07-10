@@ -144,3 +144,41 @@ export function LinkCardGroup({ children }) {
     </div>
   )
 }
+
+export function TableCell({ children, color = "white", header = false, uncenter = false }) {
+  return (
+    <div className={`h-0 ${uncenter ? "" : "center"} pad-v-4 pad-h-8 bt bg-${header ? "accent" : color} text-${header ?  "white" : "black"}`}>
+      {children}
+    </div>
+  );
+}
+
+export function TableRow({ children, header = false }) {
+  return (
+    <div className={`table-row ${header ? "bg-white-hover" : ""}`}>
+      {children}
+    </div>
+  );
+}
+
+export function Table({ children }) {
+  return (
+    <div className={`table bg-black-hover rad-16`}>
+      {children}
+    </div>
+  );
+}
+
+export function ChipGame({ children, status }) {
+  switch (status) {
+    case "success": children = "Прошёл"; break;
+    case "info": children = "В планах"; break;
+    case "warning": children = "Прохожу"; break;
+    case "error": children = "Бросил"; break;
+  }
+  return (
+    <div className={`chip rad-8 h-0 center text-white bg-${status}`}>
+      {children}
+    </div>
+  );
+}

@@ -30,27 +30,19 @@ svg {
   }
 }
 
-$headings: (
+$texts: (
   "h1": (3rem, 700),
   "h2": (2.5rem, 700),
   "h3": (2.25rem, 700),
   "h4": (2rem, 600),
   "h5": (1.5rem, 600),
-  "h6": (1.25rem, 600)
-);
-@each $name, $props in $headings {
-  .#{$name} {
-    font-size: nth($props, 1);
-    font-weight: nth($props, 2);
-  }
-}
-$bodys: (
+  "h6": (1.25rem, 600),
   "b1": (1.25rem, 500),
   "b2": (1rem, 500),
   "b3": (.75rem, 500),
   "bt": (1.25rem, 600)
 );
-@each $name, $props in $bodys {
+@each $name, $props in $texts {
   .#{$name} {
     font-size: list.nth($props, 1);
     font-weight: list.nth($props, 2);
@@ -78,7 +70,11 @@ $text-colors: (
   "accent": $accent,
   "accent-hover": $accent-hover,
   "black": $black,
-  "black-hover": $black-hover
+  "black-hover": $black-hover,
+  "error": $error,
+  "warning": $warning,
+  "success": $success,
+  "info": $info,
 );
 @each $name, $color in $text-colors {
   .text-#{$name} {
@@ -100,7 +96,7 @@ $text-colors: (
 }
 @for $rad from 1 through 64 {
   .rad-#{$rad} {
-    border-radius: #{$rad / 16}rem;
+    border-radius: #{calc($rad / 16)}rem;
   }
 }
 @for $gap from 0 through 64 {
@@ -113,12 +109,14 @@ $text-colors: (
   .v-#{$gap} {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: #{calc($gap / 16)}rem;
   }
 }
 
 .center {
-  align-items: center;
+  align-items: center !important;
+  justify-content: center;
 }
 .between {
   display: flex;
