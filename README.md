@@ -9,8 +9,7 @@ Welcome to my GitHub profile!
 
 ## 🚀 My Projects
 
-- [nilmirk/nilmirk](https://github.com/nilmirk/nilmirk) — My personal site and experiments
-- More coming soon!
+- [nilmirk](https://github.com/nilmirk/nilmirk) — My personal site
 
 ## 📊 GitHub Stats
 
