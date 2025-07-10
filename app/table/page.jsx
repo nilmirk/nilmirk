@@ -1,31 +1,13 @@
-"use client";
 import { A } from "@/components/kit";
-import { useEffect, useState } from "react";
 import { Table, TableCell, TableRow, ChipGame } from "@/components/blocks";
 
 import fs from 'fs';
 import path from 'path';
 
-export async function getStaticProps() {
+export default async function Page() {
   const filePath = path.join(process.cwd(), 'data', 'db.json');
-  const jsonData = fs.readFileSync(filePath, 'utf-8');
-  const data = JSON.parse(jsonData);
-
-  return {
-    props: {
-      games: data.games,
-    },
-  };
-}
-
-export default function Page() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3001/games')
-      .then(res => res.json())
-      .then(data => setData(data));
-  }, []);
+  const file = fs.readFileSync(filePath, 'utf-8');
+  const data = JSON.parse(file);
 
   return (
     <div className="page v-64 w-100">
