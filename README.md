@@ -9,8 +9,8 @@ Welcome to my GitHub profile!
 
 ## 🚀 My Projects
 
-- [nilmirk/nilmirk](https://github.com/nilmirk/nilmirk) — My personal site and experiments
-- More coming soon!
+- [nilmirk](https://github.com/nilmirk/nilmirk) — My personal site
+- [mirk-chat](https://github.com/nilmirk/mirk-chat) - Multi platform chat (YouTube and Twitch)
 
 ## 📊 GitHub Stats
 
