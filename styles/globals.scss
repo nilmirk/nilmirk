@@ -37,6 +37,14 @@ svg {
     fill: currentColor;
   }
 }
+input, button {
+  font-size: inherit;
+  background-color: inherit;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
 
 // generators
 $texts: (
