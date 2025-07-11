@@ -1,5 +1,5 @@
 import { A } from "@/components/kit";
-import { Table, TableCell, TableRow, ChipGame } from "@/components/blocks";
+import { Table, TableCell, TableRow, ChipGame, Tabs } from "@/components/blocks";
 
 import fs from 'fs';
 import path from 'path';
@@ -14,6 +14,7 @@ export default async function Page() {
     <div className="page v-64 w-100">
       <div className="v-32 w-100">
         <h1 className="h1">Таблица</h1>
+        <Tabs />
         <Table>
           <TableRow header>
             <TableCell uncenter header>Название</TableCell>

@@ -8,14 +8,14 @@ import { useEffect, useState } from "react";
 
 export function Header() {
   const pages = [
-    {name: "ссылки", href: "/links"},
-    {name: "таблица", href: "/table"},
-    {name: "подписка", href: "/subscribe"},
+    { name: "ссылки", href: "/links" },
+    { name: "таблица", href: "/table" },
+    { name: "подписка", href: "/subscribe" },
   ]
 
   return (
     <header className="header center between pad-v-8 pad-h-16 bg-black rad-16">
-      <A href='/'><Logo/></A>
+      <A href='/'><Logo /></A>
       <nav className="h-16 b2">
         {pages.map((page) => (
           <A key={page.name} href={page.href} className="header-link">
@@ -24,9 +24,9 @@ export function Header() {
         ))}
       </nav>
       <A href="/profile" className="header-user h-8 center b2">
-          <CircleUser />
-          аккаунт
-        </A>
+        <CircleUser />
+        аккаунт
+      </A>
     </header>
   );
 }
@@ -80,7 +80,7 @@ export function VideoFrame({ videoData, videoUrl }) {
   );
 }
 
-export function VideoList({}) { 
+export function VideoList({ }) {
   const [videos, setVideos] = useState(null);
   const [videoDataList, setVideoDataList] = useState(null);
 
@@ -147,7 +147,7 @@ export function LinkCardGroup({ children }) {
 
 export function TableCell({ children, color = "white", header = false, uncenter = false }) {
   return (
-    <div className={`h-0 ${uncenter ? "" : "center"} pad-v-4 pad-h-8 bt bg-${header ? "accent" : color} text-${header ?  "white" : "black"}`}>
+    <div className={`h-0 ${uncenter ? "" : "center"} pad-v-4 pad-h-8 bt bg-${header ? "accent" : color} text-${header ? "white" : "black"}`}>
       {children}
     </div>
   );
@@ -179,6 +179,31 @@ export function ChipGame({ children, status }) {
   return (
     <div className={`chip rad-8 h-0 center text-white bg-${status}`}>
       {children}
+    </div>
+  );
+}
+
+const tabs = [
+  { label: 'Игры', value: 'games' },
+  { label: 'Аниме', value: 'anime' },
+  { label: 'Сериалы', value: 'series' },
+  { label: 'Фильмы', value: 'films' },
+];
+
+export function Tabs({ data }) {
+  const [activeTab, setActiveTab] = useState('games');
+
+  return (
+    <div className="tabs h-1 rad-8">
+      {tabs.map((tab) => (
+        <button
+          key={tab.value}
+          className={``}
+          onClick={() => setActiveTab(tab.value)}
+        >
+          {tab.label}
+        </button>
+      ))}
     </div>
   );
 }
