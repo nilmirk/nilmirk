@@ -1,4 +1,4 @@
-import { VideoList } from "@/components/blocks";
+import { VideoList } from "@/components/client";
 
 export default function Page({ children }) {
   return (

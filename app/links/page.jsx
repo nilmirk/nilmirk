@@ -1,4 +1,4 @@
-import { LinkCardGroup, LinkCard } from "@/components/blocks";
+import { LinkCardGroup, LinkCard } from "@/components/client";
 import { Telegram, Youtube, Twitch, Steam, Github } from "@/components/icons";
 export default function InDev() {
   return (

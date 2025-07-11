@@ -57,6 +57,7 @@ $links: (
 @each $name, $props in $links {
   .link-#{$name} {
     color: list.nth($props, 1);
+    cursor: pointer;
     &:hover {
       color: list.nth($props, 2);
     }
@@ -71,11 +72,12 @@ $buttons: (
 @each $name, $props in $buttons {
   .button-#{$name} {
     background-color: list.nth($props, 1);
-    color: list.nth($porops, 3);
-    @extend .rad-8, .pad-h-8, .pad-v-4, .gap-10, .center;
+    color: list.nth($props, 3);
+    cursor: pointer;
+    @extend .rad-8, .pad-h-8, .pad-v-4, .h-10, .center;
     &:hover {
       background-color: list.nth($props, 2);
-      color: list.nth($porops, 4);
+      color: list.nth($props, 4);
     }
   }
 }
@@ -111,7 +113,7 @@ $text-colors: (
     padding-right: #{calc($pad / 16)}rem;
   }
 }
-@for $rad from 1 through 64 {
+@for $rad from 0 through 64 {
   .rad-#{$rad} {
     border-radius: #{calc($rad / 16)}rem;
   }

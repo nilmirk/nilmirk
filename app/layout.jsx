@@ -1,6 +1,6 @@
 import "@/styles/globals.scss";
 import { Manrope } from "next/font/google";
-import { Header } from "@/components/blocks";
+import { Header } from "@/components/server";
 
 const manrope = Manrope({
   subsets: ["latin", "cyrillic"],

@@ -1,4 +1,4 @@
-import { A } from "@/components/kit";
+import { A } from "@/components/server";
 export default function NotFound() {
   return (
     <div className="page v-64 w-100">
