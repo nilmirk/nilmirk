@@ -1,6 +1,6 @@
-import { LinkCardGroup, LinkCard } from "@/components/client";
+import { LinkCardGroup, LinkCard } from "@/components/server";
 import { Telegram, Youtube, Twitch, Steam, Github } from "@/components/icons";
-export default function InDev() {
+export default function Page() {
   return (
     <div className="page v-64 w-100">
       <div className="v-32 w-100">
