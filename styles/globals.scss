@@ -57,12 +57,29 @@ $links: (
 @each $name, $props in $links {
   .link-#{$name} {
     color: list.nth($props, 1);
-
     &:hover {
       color: list.nth($props, 2);
     }
   }
 }
+
+$buttons: (
+  "white": ($white, $white-hover, $black, $black-hover),
+  "accent": ($accent, $accent-hover, $white, $white-hover),
+  "black": ($black, $black-hover, $white, $white-hover)
+);
+@each $name, $props in $buttons {
+  .button-#{$name} {
+    background-color: list.nth($props, 1);
+    color: list.nth($porops, 3);
+    @extend .rad-8, .pad-h-8, .pad-v-4, .gap-10, .center;
+    &:hover {
+      background-color: list.nth($props, 2);
+      color: list.nth($porops, 4);
+    }
+  }
+}
+
 
 $text-colors: (
   "white": $white,

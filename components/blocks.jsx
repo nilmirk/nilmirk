@@ -183,14 +183,14 @@ export function ChipGame({ children, status }) {
   );
 }
 
-const tabs = [
-  { label: 'Игры', value: 'games' },
-  { label: 'Аниме', value: 'anime' },
-  { label: 'Сериалы', value: 'series' },
-  { label: 'Фильмы', value: 'films' },
-];
+export function Tabs() {
+  const tabs = [
+    { label: 'Игры', value: 'games' },
+    { label: 'Аниме', value: 'anime' },
+    { label: 'Сериалы', value: 'series' },
+    { label: 'Фильмы', value: 'films' },
+  ];
 
-export function Tabs({ data }) {
   const [activeTab, setActiveTab] = useState('games');
 
   return (
@@ -198,7 +198,7 @@ export function Tabs({ data }) {
       {tabs.map((tab) => (
         <button
           key={tab.value}
-          className={``}
+          className={activeTab === tab.value ? 'button-accent' : 'button-white'}
           onClick={() => setActiveTab(tab.value)}
         >
           {tab.label}
