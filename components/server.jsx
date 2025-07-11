@@ -12,7 +12,7 @@ export function A({ children, href, color = "white", className, ...props }) {
 export function Header() {
   const pages = [
     { name: "ссылки", href: "/links" },
-    { name: "таблица", href: "/table/games" },
+    { name: "таблица", href: "/table/games?sortBy=status&order=asc" },
     { name: "подписка", href: "/subscribe" },
   ]
 
@@ -80,10 +80,10 @@ export function Table({ children }) {
 
 export function ChipGame({ children, status }) {
   switch (status) {
-    case "success": children = "Прошёл"; break;
-    case "info": children = "В планах"; break;
-    case "warning": children = "Прохожу"; break;
-    case "error": children = "Бросил"; break;
+    case "completed": children = "Прошёл"; status = "success"; break;
+    case "planned": children = "В планах"; status = "info"; break;
+    case "in-progress": children = "Прохожу"; status = "warning"; break;
+    case "skipped": children = "Бросил"; status = "error"; break;
   }
   return (
     <div className={`chip rad-8 h-0 center text-white bg-${status}`}>

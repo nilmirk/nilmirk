@@ -2,52 +2,52 @@
   "games": [
     {
       "name": "Dishonored",
-      "status": "info",
+      "status": "planned",
       "playlist": "#"
     },
     {
       "name": "Dishonored 2",
-      "status": "info",
+      "status": "planned",
       "playlist": "#"
     },
     {
       "name": "Dishonored: Death of the Outsider",
-      "status": "info",
+      "status": "planned",
       "playlist": "#"
     },
     {
       "name": "Kingdom Rush",
-      "status": "info",
+      "status": "planned",
       "playlist": "#"
     },
     {
       "name": "Kingdom Rush Frontiers",
-      "status": "info",
+      "status": "planned",
       "playlist": "#"
     },
     {
       "name": "Kingdom Rush Origins",
-      "status": "info",
+      "status": "planned",
       "playlist": "#"
     },
     {
       "name": "Kingdom Rush Vengeance",
-      "status": "info",
+      "status": "planned",
       "playlist": "#"
     },
     {
       "name": "Kingdom Rush Alliance",
-      "status": "info",
+      "status": "planned",
       "playlist": "#"
     },
     {
       "name": "Portal",
-      "status": "info",
+      "status": "planned",
       "playlist": "#"
     },
     {
       "name": "Portal 2",
-      "status": "info",
+      "status": "planned",
       "playlist": "#"
     }
   ],

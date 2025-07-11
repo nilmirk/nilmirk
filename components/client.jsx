@@ -104,6 +104,7 @@ export function VideoList({ }) {
 
 export function Tabs() {
   const pathname = usePathname();
+
   const tabs = [
     { label: 'Игры', value: 'games' },
     { label: 'Аниме', value: 'anime' },
@@ -117,7 +118,7 @@ export function Tabs() {
         <Link
           key={tab.value}
           className={`tab button-${pathname === `/table/${tab.value}` ? 'accent' : 'white'}`}
-          href={`/table/${tab.value}`}
+          href={`/table/${tab.value}?sortBy=status&order=asc`}
         >
           {tab.label}
         </Link>
