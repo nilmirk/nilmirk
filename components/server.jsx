@@ -1,14 +1,6 @@
 import Link from "next/link";
 import { Logo, CircleUser } from "@/components/icons";
 
-export function A({ children, href, color = "white", className, ...props }) {
-  return (
-    <Link href={href} className={`link-${color} ${className}`} {...props}>
-      {children}
-    </Link>
-  );
-}
-
 export function Header() {
   const pages = [
     { name: "ссылки", href: "/links" },
@@ -17,46 +9,50 @@ export function Header() {
   ]
 
   return (
-    <header className="header center between pad-v-8 pad-h-16 bg-black rad-16">
-      <A href='/'><Logo /></A>
-      <nav className="h-16 b2">
+    <header className="row between center-a padL-16 padR-16 padT-8 padB-8 rad-16">
+      <Link className="link-white" href='/'><Logo /></Link>
+      <nav className="row center-a gap-16">
         {pages.map((page) => (
-          <A key={page.name} href={page.href} className="header-link">
+          <Link key={page.name} href={page.href} className="link-white">
             {page.name}
-          </A>
+          </Link>
         ))}
       </nav>
-      <A href="/profile" className="header-user h-8 center b2">
+      <Link href="/profile" className="row center-a gap-8 link-white">
         <CircleUser />
         аккаунт
-      </A>
+      </Link>
     </header>
   );
 }
 
 export function LinkCard({ link, href, title, children }) {
   return (
-    <A className="link-card center rad-8 h-12 pad-h-12 pad-v-8" href={href} target="_blank">
+    <Link href={href} target="_blank" className="bt-black h4 row padL-12 padR-12 padT-8 padB-8">
       {children}
-      <div className="v-0">
+      <div className="col">
         <span className="b2 text-white-hover">{title}</span>
         <span className="bt">{link}</span>
       </div>
-    </A>
+    </Link>
   );
 }
 
-export function LinkCardGroup({ children }) {
+export function LinkCardGroup({ children, title, titleIcon }) {
   return (
-    <div className="h4 v-16 rad-16 pad-v-16 pad-h-16 bg-white text-black">
+    <div className="bg-white text-black padL-16 padR-16 padT-16 padB-16 rad-16 col gap-16">
+      <div className="row gap-12 h4 center-a">
+        {titleIcon}{title}
+      </div>
       {children}
     </div>
   )
 }
 
 export function TableCell({ children, color = "white", header = false, uncenter = false }) {
+  if (header) color = "accent";
   return (
-    <div className={`h-0 ${uncenter ? "" : "center"} pad-v-4 pad-h-8 bt bg-${header ? "accent" : color} text-${header ? "white" : "black"}`}>
+    <div className={`row ${uncenter ? '' : 'center-j'} bg-${color} ${header ? 'text-white' : 'text-black'} padL-8 padR-8 padT-4 padB-4 bt`}>
       {children}
     </div>
   );
@@ -64,7 +60,7 @@ export function TableCell({ children, color = "white", header = false, uncenter 
 
 export function TableRow({ children, header = false }) {
   return (
-    <div className={`table-row ${header ? "bg-white-hover" : ""}`}>
+    <div className={`table-row gap-2 bg-black-hover`}>
       {children}
     </div>
   );
@@ -72,7 +68,7 @@ export function TableRow({ children, header = false }) {
 
 export function Table({ children }) {
   return (
-    <div className={`table bg-black-hover rad-16`}>
+    <div className="table col-gr gap-2 bg-black-hover rad-16">
       {children}
     </div>
   );
@@ -86,7 +82,7 @@ export function ChipGame({ children, status }) {
     case "skipped": children = "Бросил"; status = "error"; break;
   }
   return (
-    <div className={`chip rad-8 h-0 center text-white bg-${status}`}>
+    <div className={`b2b rad-8 text-white row w100 h100 center-j center-a bg-${status}`}>
       {children}
     </div>
   );

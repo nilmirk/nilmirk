@@ -1,4 +1,2 @@
-import { redirect } from "next/navigation";
-export default function Page() {
-  redirect("https://www.youtube.com/@nilmirklive");
-}
+import Redirect from "../layoutredirect"
+export default function Page() { return <Redirect link = "https://www.youtube.com/@nilmirklive" />; }

@@ -1,35 +1,44 @@
+// imports
 @use 'variables' as *;
 @use 'sass:list';
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
 
+
+// default
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   transition: all .3s ease-out;
-}
-:root {
-  --font: #{$font};
+  color: $white;
 }
 body {
-  font-family: var(--font);
+  font-family: #{$font};
   background-color: $black;
   padding: 1.5rem 8%;
-  color: $white;
+}
+.layout {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 .page {
   margin-top: 112px;
+  @extend .layout, .gap-64;
+}
+.block {
+  @extend .layout, .gap-32;
 }
 svg {
   width: 1em;
   height: 1em;
-
   path {
     fill: currentColor;
   }
 }
 
+// generators
 $texts: (
   "h1": (3rem, 700),
   "h2": (2.5rem, 700),
@@ -39,6 +48,7 @@ $texts: (
   "h6": (1.25rem, 600),
   "b1": (1.25rem, 500),
   "b2": (1rem, 500),
+  "b2b": (1rem, 700),
   "b3": (.75rem, 500),
   "bt": (1.25rem, 600)
 );
@@ -49,44 +59,7 @@ $texts: (
   }
 }
 
-$elements: (
-  "link": (
-    "white": ($white, $white-hover),
-    "accent": ($accent, $accent-hover),
-    "black": ($black, $black-hover)
-  ),
-  "button": (
-    "white": ($white, $white-hover, $black, $black-hover),
-    "accent": ($accent, $accent-hover, $white, $white-hover),
-    "black": ($black, $black-hover, $white, $white-hover)
-  )
-);
-
-@each $type, $variants in $elements {
-  @each $name, $props in $variants {
-    .#{$type}-#{$name} {
-      @if $type == "link" {
-        color: list.nth($props, 1);
-        cursor: pointer;
-        &:hover {
-          color: list.nth($props, 2);
-        }
-      } @else {
-        background-color: list.nth($props, 1);
-        color: list.nth($props, 3);
-        cursor: pointer;
-        @extend .rad-8, .pad-h-8, .pad-v-4, .h-10, .center;
-        &:hover {
-          background-color: list.nth($props, 2);
-          color: list.nth($props, 4);
-        }
-      }
-    }
-  }
-}
-
-
-$text-colors: (
+$colors: (
   "white": $white,
   "white-hover": $white-hover,
   "accent": $accent,
@@ -98,7 +71,7 @@ $text-colors: (
   "success": $success,
   "info": $info,
 );
-@each $name, $color in $text-colors {
+@each $name, $color in $colors {
   .text-#{$name} {
     color: #{$color};
   }
@@ -106,45 +79,126 @@ $text-colors: (
     background-color: #{$color};
   }
 }
-@for $pad from 1 through 64 {
-  .pad-v-#{$pad} {
-    padding-top: #{calc($pad / 16)}rem;
-    padding-bottom: #{calc($pad / 16)}rem;
-  }
-  .pad-h-#{$pad} {
-    padding-left: #{calc($pad / 16)}rem;
-    padding-right: #{calc($pad / 16)}rem;
-  }
-}
-@for $rad from 0 through 64 {
-  .rad-#{$rad} {
-    border-radius: #{calc($rad / 16)}rem;
-  }
-}
-@for $gap from 0 through 64 {
-  .h-#{$gap} {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: #{calc($gap / 16)}rem;
-  }
-  .v-#{$gap} {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: #{calc($gap / 16)}rem;
-  }
-}
 
-.center {
-  align-items: center !important;
+// flex
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.center-a {
+  align-items: center;
+}
+.center-j {
   justify-content: center;
 }
 .between {
-  display: flex;
   justify-content: space-between;
 }
 
-.w-100 {
+// grid
+.col-gr {
+  display: grid;
+  grid-template-rows: auto;
+}
+.row-gr {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+@for $num from 0 through 64 {
+  .gap-#{$num} {
+    gap: #{calc($num/ 16)}rem;
+  }
+  .rad-#{$num} {
+    border-radius: #{calc($num/ 16)}rem;
+  }
+  .padL-#{$num} {
+    padding-left: #{calc($num/ 16)}rem;
+  }
+  .padR-#{$num} {
+    padding-right: #{calc($num/ 16)}rem;
+  }
+  .padT-#{$num} {
+    padding-top: #{calc($num/ 16)}rem;
+  }
+  .padB-#{$num} {
+    padding-bottom: #{calc($num/ 16)}rem;
+  }
+}
+.no-rad {
+  border-radius: 0 !important;
+}
+
+.button {
+  @extend .padL-8, .padR-8, .padT-4, .padB-4, .gap-8, .rad-8, .center-a;
+  cursor: pointer;
+}
+.link {
+  cursor: pointer;
+  @extend .center-a;
+}
+$element-colors: (
+  "white": ("white", "black"),
+  "accent": ("accent", "white"),
+  "black": ("black", "white"),
+);
+
+@each $name, $prop in $element-colors {
+  .bt-#{$name} {
+    @extend .button, .bg-#{list.nth($prop, 1)}, .text-#{list.nth($prop, 2)};
+    &:hover {
+      @extend .bg-#{list.nth($prop, 1)}-hover, .text-#{list.nth($prop, 2)}-hover;
+    }
+  }
+}
+@each $name, $prop in $element-colors {
+  .link-#{$name} {
+    @extend .link, .text-#{list.nth($prop, 1)};
+    &:hover {
+      @extend .text-#{list.nth($prop, 1)}-hover;
+    }
+  }
+}
+
+.w100 {
   width: 100%;
+}
+.h100 {
+  height: 100%;
+}
+
+// blocks
+header {
+  outline: $white 1px solid;
+  outline-offset: -1px;
+  position: fixed;
+  width: calc(100% - 16%);
+  z-index: 1000;
+  .logo {
+    width: 3rem;
+    height: 2rem;
+  }
+  .header-user {
+    svg  {
+      width: 1.25em;
+      height: 1.25em;
+    }
+  }
+}
+
+.table {
+  overflow: hidden;
+  align-self: center;
+}
+.table-row {
+  display: grid;
+  grid-template-columns: auto repeat(2, 125px);
+}
+
+.tabs {
+  overflow: hidden;
 }

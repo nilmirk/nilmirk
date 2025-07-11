@@ -1,9 +1,9 @@
-import { A } from "@/components/server";
 import { Table, TableCell, TableRow, ChipGame } from "@/components/server";
 import { Tabs } from "@/components/client";
 import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
+import Link from "next/link";
 
 export default async function Page({ params, searchParams }) {
   const { tab } = await params;
@@ -43,35 +43,39 @@ export default async function Page({ params, searchParams }) {
   });
 
   return (
-    <div className="page v-64 w-100">
-      <div className="v-32 w-100">
-        <div className="center h-32">
+      <div className="block">
+        <div className="row gap-32 center-a">
           <h1 className="h1">Таблица</h1>
           <Tabs />
         </div>
         <Table>
           <TableRow header>
             <TableCell uncenter header>
-              <A href={`/table/${tab}?sortBy=name&order=${sortBy === 'name' && order === 'asc' ? 'desc' : 'asc'}`}>
+              <Link className="link-white" href={`/table/${tab}?sortBy=name&order=${sortBy === 'name' && order === 'asc' ? 'desc' : 'asc'}`}>
                 Название {sortBy === 'name' && (order === 'asc' ? '↑' : '↓')}
-              </A>
+              </Link>
             </TableCell>
             <TableCell header>
-              <A href={`/table/${tab}?sortBy=status&order=${sortBy === 'status' && order === 'asc' ? 'desc' : 'asc'}`}>
+              <Link className="link-white" href={`/table/${tab}?sortBy=status&order=${sortBy === 'status' && order === 'asc' ? 'desc' : 'asc'}`}>
                 Статус {sortBy === 'status' && (order === 'asc' ? '↑' : '↓')}
-              </A>
+              </Link>
             </TableCell>
             <TableCell header>Плейлист</TableCell>
           </TableRow>
           {sortedItems.map((item, i) => (
-            <TableRow key={i}>
+            (i % 2 == 0) ?
+            (<TableRow key={i}>
               <TableCell uncenter>{item.name}</TableCell>
               <TableCell><ChipGame status={item.status} /></TableCell>
-              <TableCell><A href={item.playlist} color="black">Клик</A></TableCell>
-            </TableRow>
+              <TableCell><Link href={item.playlist} className="link-black">Клик</Link></TableCell>
+            </TableRow>) :
+            (<TableRow key={i}>
+              <TableCell color="white-hover" uncenter>{item.name}</TableCell>
+              <TableCell color="white-hover"><ChipGame status={item.status} /></TableCell>
+              <TableCell color="white-hover"><Link href={item.playlist} className="link-black">Клик</Link></TableCell>
+            </TableRow>)
           ))}
         </Table>
       </div>
-    </div>
   );
 }

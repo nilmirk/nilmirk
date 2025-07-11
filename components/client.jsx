@@ -1,5 +1,4 @@
 "use client";
-import "@/styles/blocks.scss";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -14,13 +13,9 @@ export function Tabs() {
   ];
 
   return (
-    <div className="tabs h-1 rad-8 bg-black-hover">
+    <div className="tabs rad-8 row gap-1 bg-black-hover">
       {tabs.map((tab) => (
-        <Link
-          key={tab.value}
-          className={`tab button-${pathname === `/table/${tab.value}` ? 'accent' : 'white'}`}
-          href={`/table/${tab.value}?sortBy=status&order=asc`}
-        >
+        <Link className={`${(pathname == `/table/${tab.value}`) ? 'bt-accent' : 'bt-white'} no-rad`} key={tab.value} href={`/table/${tab.value}?sortBy=status&order=asc`}>
           {tab.label}
         </Link>
       ))}
