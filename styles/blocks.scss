@@ -19,37 +19,6 @@ header {
   }
 }
 
-.video-frame {
-  .thumbnail img {
-    object-fit: cover;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 1rem;
-  }
-  &:hover { 
-    filter: brightness(0.7);
-    cursor: pointer;
-  }
-}
-.video-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-.skeleton {
-  background: linear-gradient(90deg, $black-hover 25%, $white-hover 50%, $black-hover 75%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.2s infinite linear;
-  border-radius: 0.5rem;
-}
-.skeleton-title { width: 60%; height: 27px;}
-.skeleton-info { width: 60%; height: 22px;}
-.thumbnail.skeleton { width: 100%; aspect-ratio: 16 / 9; border-radius: 1rem;; }
-@keyframes skeleton-loading {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-
 .link-card {
   @extend .bg-black;
   &:hover {
