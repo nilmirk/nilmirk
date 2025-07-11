@@ -11,12 +11,12 @@
   box-sizing: border-box;
   text-decoration: none;
   transition: all .3s ease-out;
-  color: $white;
 }
 body {
   font-family: #{$font};
   background-color: $black;
   padding: 1.5rem 8%;
+  color: $white;
 }
 .layout {
   display: flex;
