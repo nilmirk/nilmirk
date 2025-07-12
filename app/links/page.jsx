@@ -6,8 +6,8 @@ export default function Page() {
       <h1 className="h1">Ссылки</h1>
       <div className="row gap-24">
         <LinkCardGroup titleIcon={<Telegram />} title="Telegram">
-          <LinkCard href="/Telegram" title="Канал" link="@nilmirk" />
-          <LinkCard href="/TelegramWatch" title="Канал с записями" link="@nilmirkwatch" />
+          <LinkCard href="/Telegram" title="Канал" link="@nilmirktg" />
+          <LinkCard href="/TelegramWatch" title="Канал с записями" link="@nilmirkwatchtg" />
         </LinkCardGroup>
         <LinkCardGroup titleIcon={<Youtube />} title="YouTube">
           <LinkCard href="/YouTube" title="Игровой канал" link="@nilmirk" />
