@@ -41,6 +41,3 @@ yarn-error.log*
 next-env.d.ts
 
 #my
-app/editor
-app/api/db
-components/EditorTabs.jsx
