@@ -4,8 +4,7 @@ import { Logo, CircleUser } from "@/components/icons";
 export function Header() {
   const pages = [
     { name: "ссылки", href: "/links" },
-    { name: "таблица", href: "/table/games?sortBy=status&order=asc" },
-    { name: "подписка", href: "/subscribe" },
+    { name: "таблица", href: "/table/games?sortBy=status&order=asc" }
   ]
 
   return (
@@ -18,10 +17,6 @@ export function Header() {
           </Link>
         ))}
       </nav>
-      <Link href="/profile" className="row center-a gap-8 link-white">
-        <CircleUser />
-        аккаунт
-      </Link>
     </header>
   );
 }
