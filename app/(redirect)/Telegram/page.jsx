@@ -1,2 +1,2 @@
 import Redirect from "../layoutredirect"
-export default function Page() { return <Redirect link = "https://t.me/nilmirk" />; }
+export default function Page() { return <Redirect link = "https://t.me/nilmirktg" />; }
