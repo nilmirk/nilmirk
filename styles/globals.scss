@@ -22,6 +22,7 @@ body {
   display: flex;
   width: 100%;
   flex-direction: column;
+  align-items: flex-start;
 }
 .page {
   margin-top: 112px;
@@ -37,8 +38,8 @@ svg {
     fill: currentColor;
   }
 }
-input, button {
-  font-size: inherit;
+input {
+  font: inherit;
   background-color: inherit;
   border: none;
   &:focus {
@@ -99,12 +100,25 @@ $colors: (
 }
 .center-a {
   align-items: center;
+  align-content: center;
 }
 .center-j {
   justify-content: center;
+  justify-content: center;
+}
+.center-a-self {
+  align-self: center;
+}
+.center-j-self {
+  justify-self: center;
 }
 .between {
   justify-content: space-between;
+  justify-content: space-between;
+}
+
+.ofh {
+  overflow: hidden;
 }
 
 // grid
@@ -142,6 +156,7 @@ $colors: (
 }
 
 .button {
+  display: flex;
   @extend .padL-8, .padR-8, .padT-4, .padB-4, .gap-8, .rad-8, .center-a;
   cursor: pointer;
 }
@@ -198,15 +213,7 @@ header {
   }
 }
 
-.table {
-  overflow: hidden;
-  align-self: center;
-}
 .table-row {
   display: grid;
-  grid-template-columns: auto repeat(2, 125px);
-}
-
-.tabs {
-  overflow: hidden;
+  grid-template-columns: 1fr repeat(2, 125px);
 }

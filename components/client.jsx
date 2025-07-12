@@ -13,7 +13,7 @@ export function Tabs() {
   ];
 
   return (
-    <div className="tabs rad-8 row gap-1 bg-black-hover">
+    <div className="ofh tabs rad-8 row gap-1 bg-black-hover">
       {tabs.map((tab) => (
         <Link className={`${(pathname == `/table/${tab.value}`) ? 'bt-accent' : 'bt-white'} no-rad`} key={tab.value} href={`/table/${tab.value}?sortBy=status&order=asc`}>
           {tab.label}

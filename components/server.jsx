@@ -66,9 +66,9 @@ export function TableRow({ children, header = false }) {
   );
 }
 
-export function Table({ children }) {
+export function Table({ children, className }) {
   return (
-    <div className="table col-gr gap-2 bg-black-hover rad-16">
+    <div className={`w100 ofh center-a-self table col-gr gap-2 bg-black-hover rad-16 ${className}`}>
       {children}
     </div>
   );
