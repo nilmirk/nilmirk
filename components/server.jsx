@@ -49,18 +49,18 @@ export function LinkCardGroup({ children, title, titleIcon }) {
   )
 }
 
-export function TableCell({ children, color = "white", header = false, uncenter = false }) {
-  if (header) color = "accent";
+export function TableCell({ children, color = "black", header = false, uncenter = false }) {
+  if (header) color = "black";
   return (
-    <div className={`row ${uncenter ? '' : 'center-j'} bg-${color} ${header ? 'text-white' : 'text-black'} padL-8 padR-8 padT-4 padB-4 bt`}>
+    <div className={`row ${uncenter ? '' : 'center-j'} bg-${color} ${header ? 'text-accent' : 'text-white'} padL-8 padR-8 padT-4 padB-4 bt`}>
       {children}
     </div>
   );
 }
 
-export function TableRow({ children, header = false }) {
+export function TableRow({ children, color = "black", }) {
   return (
-    <div className={`table-row gap-2 bg-black-hover`}>
+    <div className={`table-row gap-2 bg-${color}`}>
       {children}
     </div>
   );
@@ -68,7 +68,7 @@ export function TableRow({ children, header = false }) {
 
 export function Table({ children, className }) {
   return (
-    <div className={`w100 ofh center-a-self table col-gr gap-2 bg-black-hover rad-16 ${className}`}>
+    <div className={`w100 ofh center-a-self table col-gr gap-2 bg-white rad-16 ${className}`}>
       {children}
     </div>
   );

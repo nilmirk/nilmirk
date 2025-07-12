@@ -51,12 +51,12 @@ export default async function Page({ params, searchParams }) {
         <Table>
           <TableRow header>
             <TableCell uncenter header>
-              <Link className="link-white" href={`/table/${tab}?sortBy=name&order=${sortBy === 'name' && order === 'asc' ? 'desc' : 'asc'}`}>
+              <Link className="link-accent" href={`/table/${tab}?sortBy=name&order=${sortBy === 'name' && order === 'asc' ? 'desc' : 'asc'}`}>
                 Название {sortBy === 'name' && (order === 'asc' ? '↑' : '↓')}
               </Link>
             </TableCell>
             <TableCell header>
-              <Link className="link-white" href={`/table/${tab}?sortBy=status&order=${sortBy === 'status' && order === 'asc' ? 'desc' : 'asc'}`}>
+              <Link className="link-accent" href={`/table/${tab}?sortBy=status&order=${sortBy === 'status' && order === 'asc' ? 'desc' : 'asc'}`}>
                 Статус {sortBy === 'status' && (order === 'asc' ? '↑' : '↓')}
               </Link>
             </TableCell>
@@ -67,12 +67,12 @@ export default async function Page({ params, searchParams }) {
             (<TableRow key={i}>
               <TableCell uncenter>{item.name}</TableCell>
               <TableCell><ChipGame status={item.status} /></TableCell>
-              <TableCell><Link href={item.playlist} className="link-black">Клик</Link></TableCell>
+              <TableCell>{item.playlist == '#' ? ('нету') : (<Link href={item.playlist} className="link-white">Клик</Link>)}</TableCell>
             </TableRow>) :
-            (<TableRow key={i}>
-              <TableCell color="white-hover" uncenter>{item.name}</TableCell>
-              <TableCell color="white-hover"><ChipGame status={item.status} /></TableCell>
-              <TableCell color="white-hover"><Link href={item.playlist} className="link-black">Клик</Link></TableCell>
+            (<TableRow color="black-hover" key={i}>
+              <TableCell color="black-hover" uncenter>{item.name}</TableCell>
+              <TableCell color="black-hover"><ChipGame status={item.status} /></TableCell>
+              <TableCell color="black-hover">{item.playlist == '#' ? ('нету') : (<Link href={item.playlist} className="link-white">Клик</Link>)}</TableCell>
             </TableRow>)
           ))}
         </Table>
