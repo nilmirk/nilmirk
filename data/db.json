@@ -2,8 +2,8 @@
   "games": [
     {
       "name": "Dishonored",
-      "status": "planned",
-      "playlist": "#"
+      "status": "in-progress",
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaa10pnPoKv8N5jT981Ti0P6"
     },
     {
       "name": "Dishonored 2",
@@ -17,8 +17,8 @@
     },
     {
       "name": "Kingdom Rush",
-      "status": "planned",
-      "playlist": "#"
+      "status": "in-progress",
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabBGCaiupBFDGoPJjbnWYW3"
     },
     {
       "name": "Kingdom Rush Frontiers",
