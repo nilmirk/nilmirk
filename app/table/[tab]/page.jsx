@@ -67,12 +67,12 @@ export default async function Page({ params, searchParams }) {
             (<TableRow key={i}>
               <TableCell uncenter>{item.name}</TableCell>
               <TableCell><ChipGame status={item.status} /></TableCell>
-              <TableCell>{item.playlist == '#' ? ('нету') : (<Link href={item.playlist} className="link-white">Клик</Link>)}</TableCell>
+              <TableCell>{item.playlist == '#' ? ('нету') : (<Link target="_blank" href={item.playlist} className="link-white">Клик</Link>)}</TableCell>
             </TableRow>) :
             (<TableRow color="black-hover" key={i}>
               <TableCell color="black-hover" uncenter>{item.name}</TableCell>
               <TableCell color="black-hover"><ChipGame status={item.status} /></TableCell>
-              <TableCell color="black-hover">{item.playlist == '#' ? ('нету') : (<Link href={item.playlist} className="link-white">Клик</Link>)}</TableCell>
+              <TableCell color="black-hover">{item.playlist == '#' ? ('нету') : (<Link target="_blank" href={item.playlist} className="link-white">Клик</Link>)}</TableCell>
             </TableRow>)
           ))}
         </Table>
