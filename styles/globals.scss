@@ -116,9 +116,17 @@ $colors: (
   justify-content: space-between;
   justify-content: space-between;
 }
-
+.start-a {
+  align-items: flex-start;
+}
+.start-j {
+  justify-content: flex-start;
+}
 .ofh {
   overflow: hidden;
+}
+.wrap {
+  flex-wrap: wrap;
 }
 
 // grid
