@@ -1,5 +1,5 @@
 import { LinkCardGroup, LinkCard } from "@/components/server";
-import { Telegram, Youtube, Twitch, Steam, Github, Boosty, VK } from "@/components/icons";
+import { Telegram, Youtube, Twitch, Steam, Github, Boosty, VK, GG } from "@/components/icons";
 export default function Page() {
   return (
     <div className="block">
@@ -19,6 +19,9 @@ export default function Page() {
           </LinkCard>
           <LinkCard href="/VKLive" title="VKLive канал" link="@nilmirk">
             <VK />
+          </LinkCard>
+          <LinkCard href="/GoodGame" title="GoodGame канал" link="@nilmirk">
+            <GG />
           </LinkCard>
         </LinkCardGroup>
         <LinkCardGroup title="Другое">
