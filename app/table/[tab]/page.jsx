@@ -61,7 +61,7 @@ export default async function Page({ params, searchParams }) {
               </Link>
             </TableCell>
             <TableCell header>Плейлист</TableCell>
-            <TableCell header>Полное прохождение</TableCell>
+            <TableCell header>Прохождение</TableCell>
           </TableRow>
           {sortedItems.map((item, i) => (
             (i % 2 == 0) ?

@@ -223,5 +223,5 @@ header {
 
 .table-row {
   display: grid;
-  grid-template-columns: 1fr repeat(2, 125px);
+  grid-template-columns: 1fr repeat(2, 125px) 150px;
 }
