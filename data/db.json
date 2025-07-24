@@ -58,7 +58,7 @@
       "name": "Portal 2",
       "status": "completed",
       "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabI6G1peWZNgvIdZhEqxJ3M",
-      "full": "#"
+      "full": "https://www.youtube.com/watch?v=2b7sWzPvsCk"
     },
     {
       "name": "Metro 2033 Redux",
@@ -92,6 +92,12 @@
     },
     {
       "name": "Slime Rancher 2",
+      "status": "planned",
+      "playlist": "#",
+      "full": "#"
+    },
+    {
+      "name": "Miside",
       "status": "planned",
       "playlist": "#",
       "full": "#"
