@@ -17,12 +17,6 @@ export default function Page() {
           <LinkCard href="/Twitch" title="Twitch канал" link="@nilmirk">
             <Twitch />
           </LinkCard>
-          <LinkCard href="/VKLive" title="VKLive канал" link="@nilmirk">
-            <VK />
-          </LinkCard>
-          <LinkCard href="/GoodGame" title="GoodGame канал" link="@nilmirk">
-            <GG />
-          </LinkCard>
         </LinkCardGroup>
         <LinkCardGroup title="Другое">
           <LinkCard href="/Steam" title="Steam" link="/nilmirk">
