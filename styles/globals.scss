@@ -223,5 +223,10 @@ header {
 
 .table-row {
   display: grid;
-  grid-template-columns: 1fr repeat(2, 125px) 150px;
+  grid-template-columns: 500px repeat(2, 125px) 150px;
+}
+@media screen and (max-width: 900px) {
+  .table {
+  overflow-x: scroll;
+}
 }

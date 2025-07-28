@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default async function Page({ params, searchParams }) {
   const { tab } = await params;
-  const { sortBy = 'name', order = 'asc' } = searchParams;
+  const { sortBy = 'name', order = 'asc' } = await searchParams;
 
   const filePath = path.join(process.cwd(), 'data', 'db.json');
   const file = await fs.promises.readFile(filePath, 'utf-8');
@@ -48,7 +48,7 @@ export default async function Page({ params, searchParams }) {
           <h1 className="h1">Таблица</h1>
           <Tabs />
         </div>
-        <Table>
+        <Table className="table">
           <TableRow header>
             <TableCell uncenter header>
               <Link className="link-accent" href={`/table/${tab}?sortBy=name&order=${sortBy === 'name' && order === 'asc' ? 'desc' : 'asc'}`}>
