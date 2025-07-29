@@ -3,104 +3,87 @@
     {
       "name": "Dishonored",
       "status": "in-progress",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaa10pnPoKv8N5jT981Ti0P6",
-      "full": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaa10pnPoKv8N5jT981Ti0P6"
     },
     {
       "name": "Dishonored 2",
       "status": "planned",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaYnWAN-rZDX74td42yM5FX1",
-      "full": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaYnWAN-rZDX74td42yM5FX1"
     },
     {
       "name": "Dishonored: Death of the Outsider",
       "status": "planned",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTab4qJIs-xoyCHO07TeidbGf",
-      "full": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTab4qJIs-xoyCHO07TeidbGf"
     },
     {
       "name": "Kingdom Rush",
       "status": "in-progress",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabBGCaiupBFDGoPJjbnWYW3",
-      "full": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabBGCaiupBFDGoPJjbnWYW3"
     },
     {
       "name": "Kingdom Rush Frontiers",
       "status": "planned",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaaBMT_O6Qrm9be5ILdi-qO8",
-      "full": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaaBMT_O6Qrm9be5ILdi-qO8"
     },
     {
       "name": "Kingdom Rush Origins",
       "status": "planned",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabdn-lY8tHbngEwWPKZps5g",
-      "full": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabdn-lY8tHbngEwWPKZps5g"
     },
     {
       "name": "Kingdom Rush Vengeance",
       "status": "planned",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaYd6a8DpPBgVd_INVcOGvYd",
-      "full": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaYd6a8DpPBgVd_INVcOGvYd"
     },
     {
       "name": "Kingdom Rush Alliance",
       "status": "planned",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabC3rkCk71-djAZnVUIgtAe",
-      "full": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabC3rkCk71-djAZnVUIgtAe"
     },
     {
       "name": "Portal",
       "status": "completed",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTab4B5AkRaECDH21ESOBJYS_",
-      "full": "https://www.youtube.com/watch?v=1rId3TGIpLo"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTab4B5AkRaECDH21ESOBJYS_"
     },
     {
       "name": "Portal 2",
       "status": "completed",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabI6G1peWZNgvIdZhEqxJ3M",
-      "full": "https://www.youtube.com/watch?v=2b7sWzPvsCk"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabI6G1peWZNgvIdZhEqxJ3M"
     },
     {
       "name": "Metro 2033 Redux",
       "status": "in-progress",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaZlAanqFFNwqw1R974-jEdm",
-      "full": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaZlAanqFFNwqw1R974-jEdm"
     },
     {
       "name": "Metro Last Light Redux",
       "status": "planned",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaa6ABy94hcNa9E41OZeLKQU",
-      "full": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaa6ABy94hcNa9E41OZeLKQU"
     },
     {
       "name": "Metro Exodus",
       "status": "planned",
-      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTab6K1BNGoIduxD9jMazz4E5",
-      "full": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTab6K1BNGoIduxD9jMazz4E5"
     },
     {
       "name": "Cult of the Lamb",
       "status": "planned",
-      "playlist": "#",
-      "full": "#"
+      "playlist": "#"
     },
     {
       "name": "Slime Rancher",
       "status": "planned",
-      "playlist": "#",
-      "full": "#"
+      "playlist": "#"
     },
     {
       "name": "Slime Rancher 2",
       "status": "planned",
-      "playlist": "#",
-      "full": "#"
+      "playlist": "#"
     },
     {
       "name": "Miside",
       "status": "planned",
-      "playlist": "#",
-      "full": "#"
+      "playlist": "#"
     }
   ],
   "anime": [],

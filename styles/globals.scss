@@ -223,7 +223,7 @@ header {
 
 .table-row {
   display: grid;
-  grid-template-columns: 500px repeat(2, 125px) 150px;
+  grid-template-columns: 1fr repeat(2, 125px);
   justify-content: space-between;
 }
 @media screen and (max-width: 900px) {
