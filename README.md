@@ -10,7 +10,7 @@ Welcome to my GitHub profile!
 ## 🚀 My Projects
 
 - [nilmirk](https://github.com/nilmirk/nilmirk) — My personal site
-- [mirk-chat](https://github.com/nilmirk/mirk-chat) — Custom Twitch chat
+- [mirk-chat](https://github.com/nilmirk/mirk-chat) — Custom Twitch chat and bot
 
 ## 📊 GitHub Stats
 
