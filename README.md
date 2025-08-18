@@ -10,11 +10,12 @@ Welcome to my GitHub profile!
 ## 🚀 My Projects
 
 - [nilmirk](https://github.com/nilmirk/nilmirk) — My personal site
-- [mirk-chat](https://github.com/nilmirk/mirk-chat) — Custom Twitch chat
+- [mirk-chat](https://github.com/nilmirk/mirk-chat) — Custom Twitch chat and bot
 
 ## 📊 GitHub Stats
 
-![nilmirk's GitHub stats](https://github-readme-stats.vercel.app/api?username=nilmirk&show_icons=true&theme=radical)
+![nilmirk's Stats](https://github-readme-stats.vercel.app/api?username=nilmirk&theme=dark&show_icons=true&hide_border=true&count_private=true)
+![nilmirk's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=nilmirk&theme=dark&show_icons=true&hide_border=true&layout=compact)
 
 ---
 
