@@ -17,7 +17,7 @@
     },
     {
       "name": "Kingdom Rush",
-      "status": "in-progress",
+      "status": "completed",
       "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabBGCaiupBFDGoPJjbnWYW3"
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "name": "Metro 2033 Redux",
-      "status": "in-progress",
+      "status": "completed",
       "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaZlAanqFFNwqw1R974-jEdm"
     },
     {
@@ -82,7 +82,7 @@
     },
     {
       "name": "Miside",
-      "status": "planned",
+      "status": "in-progress",
       "playlist": "#"
     }
   ],
