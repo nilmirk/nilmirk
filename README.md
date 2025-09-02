@@ -11,7 +11,6 @@ Welcome to my GitHub profile!
 
 - [nilmirk](https://github.com/nilmirk/nilmirk) — Website for redirect and table with content
 - [mirk-chat](https://github.com/nilmirk/mirk-chat) — Custom Twitch chat and bot
-- [mirk-ui](https://github.com/nilmirk/mirk-chat) — My Next.js ui library
 
 ## 📊 GitHub Stats
 
