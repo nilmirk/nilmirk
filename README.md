@@ -9,6 +9,7 @@ Welcome to my GitHub profile!
 
 ## 🚀 My Projects
 
+### Web
 - [nilmirk](https://github.com/nilmirk/nilmirk) — Website for redirect and table with content
 - [mirk-chat](https://github.com/nilmirk/mirk-chat) — Custom Twitch chat and bot
 - [mirknil](https://github.com/nilmirk/mirknil) — My website
