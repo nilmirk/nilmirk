@@ -1,7 +1,7 @@
 # 👋 Hi, I'm nilmirk
 
 Welcome to my GitHub profile!
-📫 Contact me: nilmirk.partner@gmail.com
+- 📫 Contact me: nilmirk.partner@gmail.com
 
 ## 🚀 My Projects
 
