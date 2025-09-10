@@ -68,25 +68,29 @@
     {
       "name": "Cult of the Lamb",
       "status": "planned",
-      "playlist": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabEkgeoyG5_ICSaFZ7rA7rs"
     },
     {
       "name": "Slime Rancher",
       "status": "planned",
-      "playlist": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaah3t067pBoulGTvkcgbRlr"
     },
     {
       "name": "Slime Rancher 2",
       "status": "planned",
-      "playlist": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabuzzVI6baQneFuAET3ZaKY"
     },
     {
       "name": "Miside",
       "status": "in-progress",
-      "playlist": "#"
+      "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabjELBybn1NdojxqwWJ6h1D"
     }
   ],
   "anime": [],
-  "series": [],
+  "series": [{
+    "name": "Flash (2014)",
+    "status": "in-progress",
+    "playlist": "https://t.me/nilmirkwatchtg/5"
+  }],
   "films": []
 }
