@@ -22,7 +22,7 @@
     },
     {
       "name": "Kingdom Rush Frontiers",
-      "status": "planned",
+      "status": "in-progress",
       "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTaaBMT_O6Qrm9be5ILdi-qO8"
     },
     {
@@ -84,6 +84,16 @@
       "name": "Miside",
       "status": "in-progress",
       "playlist": "https://www.youtube.com/playlist?list=PLBc4-63xJTabjELBybn1NdojxqwWJ6h1D"
+    },
+    {
+      "name": "Hollow Knight",
+      "status": "planned",
+      "playlist": "#"
+    },
+    {
+      "name": "Hollow Knight: Silksong",
+      "status": "planned",
+      "playlist": "#"
     }
   ],
   "anime": [],
