@@ -5,7 +5,6 @@
 ## 🚀 My Projects
 
 ### Web
-- [nilmirk](https://github.com/nilmirk/nilmirk) — Website for redirect and table with content
 - [mirknil](https://github.com/nilmirk/mirknil) — My website
 - [mirk-ui](https://github.com/nilmirk/mirk-ui) — My Next.js component library
 
